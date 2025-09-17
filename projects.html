@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects – SAHARA Iaamar Development</title>
+  <meta name="description" content="Projects by SAHARA Iaamar — highways, industrial platforms, residential roads, maintenance." />
+  <link rel="icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* small page-specific tweaks (you can move to css/style.css) */
+    .projects-hero { padding: 56px 0; text-align:center; background: linear-gradient(180deg, rgba(11,43,74,0.9), rgba(11,43,74,0.85)); color: white; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 22px;
+      padding: 36px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .project-card { background: var(--white); border-radius: 12px; overflow:hidden; box-shadow: var(--card-shadow); transition: transform 260ms; }
+    .project-card img { width:100%; height:200px; object-fit:cover; display:block; }
+    .project-info { padding:16px; }
+    .project-info h3 { color:var(--navy); margin-bottom:6px; }
+    .project-meta { color:var(--muted); font-weight:600; margin-bottom:10px; }
+    .categories { text-align:center; padding:28px 16px; }
+    .filter-btns{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+    .filter-btns button{ padding:10px 16px; border-radius:999px; border:2px solid var(--navy); background:transparent; color:var(--navy); cursor:pointer; }
+    .filter-btns button.active, .filter-btns button:hover{ background:var(--navy); color:var(--white); }
+    .testimonials { padding:36px 20px; background:var(--bg); }
+    .logos img{ height:46px; filter:grayscale(100%); transition:filter 180ms; }
+    .logos img:hover{ filter:none; }
+  </style>
+</head>
+<body>
+  <!-- HEADER: keep brand + the unified nav -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="SAHARA Iaamar Development">
+        <img src="images/logo.png" alt="SAHARA Iaamar logo" class="brand-logo" />
+        <span class="brand-text"><span class="brand-strong">SAHARA</span> Iaamar Development</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link active">Services</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="projects-hero">
+    <div class="container">
+      <h1 class="hero-title">Featured Projects</h1>
+      <p class="hero-subtitle">Large-scale highway work, industrial platforms, residential goudronnage and long-term maintenance projects — delivering quality and reliability across Morocco.</p>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <main>
+    <section class="projects-grid container reveal" id="projectsGrid">
+      <!-- Example project cards — change images/text with real content -->
+      <article class="project-card" data-category="highway">
+        <img src="images/project1.jpg" alt="Highway Link A7">
+        <div class="project-info">
+          <h3>Highway Link A7 — Casablanca</h3>
+          <div class="project-meta">Location: Casablanca • Type: Asphalt & Civil Engineering</div>
+          <p>Large-scale asphalt paving and drainage upgrades to increase capacity and durability, completed within schedule and safety standards.</p>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="industrial">
+        <img src="images/project2.jpg" alt="Industrial platform">
+        <div class="project-info">
+          <h3>Industrial Platform — Tangier</h3>
+          <div class="project-meta">Location: Tangier • Type: Industrial platform & earthworks</div>
+          <p>Reinforced platform construction for heavy-loading operations with engineered sub-base and drainage systems.</p>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="residential">
+        <img src="images/project3.jpg" alt="Residential roads">
+        <div class="project-info">
+          <h3>Residential Roads — Agadir</h3>
+          <div class="project-meta">Location: Agadir • Type: Residential paving</div>
+          <p>Local road renewal and sidewalk installation to improve mobility, safety and long-term maintenance cost savings.</p>
+        </div>
+      </article>
+
+      <!-- add more cards (maintenance, highway, etc.) as needed -->
+    </section>
+
+    <!-- Categories filter -->
+    <section class="categories">
+      <h2>Filter by Project Type</h2>
+      <div class="filter-btns" role="toolbar" aria-label="Project filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="highway">Highways</button>
+        <button data-filter="industrial">Industrial Platforms</button>
+        <button data-filter="residential">Residential</button>
+        <button data-filter="maintenance">Maintenance</button>
+      </div>
+    </section>
+
+    <!-- Testimonials / logos -->
+    <section class="testimonials">
+      <h2>Trusted by</h2>
+      <div class="logos" style="display:flex; justify-content:center; gap:28px; flex-wrap:wrap; margin-top:18px;">
+        <img src="images/client1.png" alt="Client 1">
+        <img src="images/client2.png" alt="Client 2">
+        <img src="images/client3.png" alt="Client 3">
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="contact-block" style="padding:36px 0;">
+      <div class="container contact-grid">
+        <div class="contact-form">
+          <h2>Want the same quality for your project?</h2>
+          <p class="lead">Contact us for a detailed case study and quote.</p>
+          <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+        </div>
+        <aside class="contact-info">
+          <h3>Quick Contact</h3>
+          <p><strong>Phone:</strong> +212 600 000 000</p>
+          <p><strong>Email:</strong> contact@sahara-iaamar.ma</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="SAHARA Iaamar logo" class="footer-logo" />
+        <p>Certified road construction & asphalt specialists. Safety, quality & sustainability.</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-info">
+        <p><strong>Business hours:</strong> Mon–Fri 08:00–17:00</p>
+        <p>Certifications: ISO 9001 • Construction License • Insured</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>©️ 2025 SAHARA Iaamar Development. All Rights Reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    // Projects filter (safe, no global 'event' use)
+    document.addEventListener('DOMContentLoaded', function(){
+      const buttons = document.querySelectorAll('.filter-btns button');
+      const cards = document.querySelectorAll('.project-card');
+
+      function filterProjects(category) {
+        cards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) card.style.display = '';
+          else card.style.display = 'none';
+        });
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function(){
+          buttons.forEach(b=>b.classList.remove('active'));
+          this.classList.add('active');
+          filterProjects(this.dataset.filter);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
